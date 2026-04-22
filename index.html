@@ -1,0 +1,609 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Prime Pasture — 100% Grass-Fed Cooking Oils</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,500;1,300;1,400&family=Jost:wght@200;300;400&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="style.css">
+<script>
+  if ('scrollRestoration' in history) history.scrollRestoration = 'manual';
+</script>
+</head>
+<body>
+
+<!-- NAV -->
+<nav>
+  <div class="nav-brand">
+    <img src="./webp%20images/logo-no-bg.webp" alt="Prime Pasture logo">
+    <div class="nav-logo">Prime Pasture</div>
+  </div>
+  <ul class="nav-links">
+    <li><a href="#products">Products</a></li>
+    <li><a href="#origin">Origin</a></li>
+    <li><a href="#ingredients">Ingredients</a></li>
+    <li><a href="#story">Our Story</a></li>
+  </ul>
+</nav>
+
+<!-- HERO -->
+<section class="hero">
+  <div class="hero-bg"></div>
+  <div class="hero-overlay"></div>
+  <div class="hero-content">
+    <p class="hero-eyebrow">Mongolia · 100% Grass-Fed · Ancestral Cooking</p>
+    <h1 class="hero-title">Fat as it<br>was <em>meant to be.</em></h1>
+    <div class="hero-divider"></div>
+    <p class="hero-sub">Rendered from the bones of free-roaming Mongolian cattle. Unrefined. Untouched. Made the way the steppe has always made it.</p>
+  </div>
+  <div class="scroll-hint">
+    <span>Scroll</span>
+    <div class="scroll-line"></div>
+  </div>
+</section>
+
+
+<!-- PRODUCT SECTION -->
+<section class="product-section" id="products">
+  <div class="product-container">
+    <!-- Trust seal -->
+    <div class="product-seal" aria-label="Seed oil-free cooking">
+      <svg viewBox="0 0 200 200" xmlns="http://www.w3.org/2000/svg">
+        <defs>
+          <path id="seal-top-arc" d="M 30 100 A 70 70 0 0 1 170 100" fill="none"/>
+          <path id="seal-bot-arc" d="M 34 108 A 66 66 0 0 0 166 108" fill="none"/>
+        </defs>
+        <circle cx="100" cy="100" r="96" fill="none" stroke="currentColor" stroke-width="1.2" opacity="0.95"/>
+        <circle cx="100" cy="100" r="88" fill="none" stroke="currentColor" stroke-width="0.5" opacity="0.5"/>
+        <circle cx="18"  cy="100" r="2" fill="currentColor"/>
+        <circle cx="182" cy="100" r="2" fill="currentColor"/>
+        <text class="seal-text">
+          <textPath href="#seal-top-arc" startOffset="50%" text-anchor="middle">Seed Oil-Free</textPath>
+        </text>
+        <text class="seal-text">
+          <textPath href="#seal-bot-arc" startOffset="50%" text-anchor="middle">Ancestral Cooking</textPath>
+        </text>
+        <g class="seal-icon" transform="translate(100 100)" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round">
+          <!-- leafy sprig rising from pan -->
+          <path d="M -4 -18 Q 0 -4 4 -18" fill="currentColor" opacity="0.9" stroke="none"/>
+          <path d="M -12 -10 Q -6 -2 0 -8" fill="currentColor" opacity="0.85" stroke="none"/>
+          <path d="M 12 -10 Q 6 -2 0 -8" fill="currentColor" opacity="0.85" stroke="none"/>
+          <line x1="0" y1="-8" x2="0" y2="6"/>
+          <!-- pan bowl -->
+          <path d="M -22 6 Q 0 26 22 6 Z" fill="currentColor" fill-opacity="0.14"/>
+          <!-- handle -->
+          <line x1="22" y1="6" x2="32" y2="2"/>
+        </g>
+      </svg>
+    </div>
+
+    <!-- Background image slider -->
+    <div class="product-bg-wrapper">
+      <div class="product-bg" style="background-image: url(./webp%20images/rock%20no%20product%20upscale%202.webp);">
+        <img class="product-spray product-spray-1" src="./webp%20images/bone%20marrow%20spray.webp" alt="Bone Marrow spray">
+        <img class="product-spray product-spray-2" src="./webp%20images/ghee%20spray%20shadow%20final.webp" alt="Ghee spray">
+      </div>
+    </div>
+    
+    <!-- Text overlay -->
+    <div class="product-overlay">
+      <!-- Product 1: Bone Marrow (visible first) -->
+      <div class="product-card product-card-1">
+        <img class="mobile-spray" src="./webp%20images/bone%20marrow%20spray.webp" alt="" aria-hidden="true">
+        <div class="glass-panel">
+          <p class="section-label">The Collection</p>
+          <h2>Bone Marrow<br><em>& Avocado</em></h2>
+          <p class="product-tagline">500°F Smoke Point · 200ml Spray Can</p>
+
+          <div class="specs-grid">
+            <div class="spec-item">
+              <p class="spec-label">Format</p>
+              <p class="spec-value">200ml Spray</p>
+            </div>
+            <div class="spec-item">
+              <p class="spec-label">Smoke Point</p>
+              <p class="spec-value">500°F</p>
+            </div>
+            <div class="spec-item">
+              <p class="spec-label">Marrow Oil</p>
+              <p class="spec-value">70%</p>
+            </div>
+            <div class="spec-item">
+              <p class="spec-label">Avocado Oil</p>
+              <p class="spec-value">30%</p>
+            </div>
+          </div>
+
+          <ul class="benefits-list">
+            <li>Stable fats ideal for frying, roasting & grilling at high heat</li>
+            <li>Naturally rich in collagen, B12 & anti-inflammatory compounds</li>
+            <li>Supports joint health, skin vitality & overall wellbeing</li>
+            <li>Less processed than refined seed oils — more nutrient-dense</li>
+            <li>A functional, ancestral alternative to modern cooking fats</li>
+          </ul>
+
+          <div class="price-tag">
+            <span class="price-amount">12,000</span>
+            <span class="price-currency">MNT / bottle</span>
+          </div>
+        </div>
+      </div>
+
+      <!-- Product 2: Ghee (revealed on scroll) -->
+      <div class="product-card product-card-2">
+        <div class="glass-panel">
+          <p class="section-label">The Collection</p>
+          <h2>Golden<br><em>Ghee</em></h2>
+          <p class="product-tagline">485°F Smoke Point · 200ml Spray Can</p>
+
+          <div class="specs-grid">
+            <div class="spec-item">
+              <p class="spec-label">Format</p>
+              <p class="spec-value">200ml Spray</p>
+            </div>
+            <div class="spec-item">
+              <p class="spec-label">Smoke Point</p>
+              <p class="spec-value">485°F</p>
+            </div>
+            <div class="spec-item">
+              <p class="spec-label">Grass-Fed Ghee</p>
+              <p class="spec-value">100%</p>
+            </div>
+            <div class="spec-item">
+              <p class="spec-label">Pure Clarity</p>
+              <p class="spec-value">100%</p>
+            </div>
+          </div>
+
+          <ul class="benefits-list">
+            <li>Pure butterfat clarified to perfection — zero lactose, zero casein</li>
+            <li>Rich in butyric acid & fat-soluble vitamins A, D, E & K2</li>
+            <li>Enhances nutrient absorption & supports gut health</li>
+            <li>The golden standard of ancestral cooking fats</li>
+            <li>Shelf-stable, aromatic, and deeply nourishing</li>
+          </ul>
+
+          <div class="price-tag">
+            <span class="price-amount">14,500</span>
+            <span class="price-currency">MNT / bottle</span>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ORIGIN / SPLIT INTRO -->
+<section class="split-section reveal" id="origin">
+  <div class="split-image">
+     <img src="./webp%20images/ger%20car.webp" loading="lazy">
+  </div>
+  <div class="split-text">
+    <span class="section-index" aria-hidden="true">I.</span>
+    <p class="section-label">Where It Begins</p>
+    <h2>From open pastures<br>to your kitchen.</h2>
+    <div class="thin-rule"></div>
+    <p class="drop-cap">In the vast grasslands of Mongolia, cattle roam freely under open skies, grazing on wild grasses untouched by chemical intervention. This is where Prime Pasture begins — not in a factory, but in a tradition that has sustained nomadic families for centuries.</p>
+    <p>The land shapes the animal. The animal shapes the fat. The fat shapes everything you cook.</p>
+    <svg class="fleuron" viewBox="0 0 120 20" aria-hidden="true">
+      <line x1="0" y1="10" x2="48" y2="10" stroke="currentColor" stroke-width="1"/>
+      <circle cx="60" cy="10" r="2" fill="currentColor"/>
+      <line x1="72" y1="10" x2="120" y2="10" stroke="currentColor" stroke-width="1"/>
+    </svg>
+  </div>
+</section>
+
+<!-- FULLBLEED HORSEMAN QUOTE -->
+<section class="fullbleed">
+  <div class="fullbleed-bg" style="background-image: url(./webp%20images/horseman.webp);"></div>
+  <div class="fullbleed-overlay"></div>
+  <div class="fullbleed-text reveal">
+    <span class="section-index" aria-hidden="true">II.</span>
+    <span class="drop-quote" aria-hidden="true">&ldquo;</span>
+    <blockquote>The steppe gives everything &mdash; you just have to know how to render it.</blockquote>
+    <svg class="fleuron" viewBox="0 0 120 20" aria-hidden="true">
+      <line x1="0" y1="10" x2="48" y2="10" stroke="currentColor" stroke-width="1"/>
+      <circle cx="60" cy="10" r="2" fill="currentColor"/>
+      <line x1="72" y1="10" x2="120" y2="10" stroke="currentColor" stroke-width="1"/>
+    </svg>
+    <cite>A tradition passed through generations of Mongolian herders</cite>
+  </div>
+</section>
+
+<!-- INGREDIENTS -->
+<section class="ingredients-section reveal" id="ingredients">
+  <div class="ingredients-bg" style="background-image: url(./webp%20images/malchin%202.webp);" aria-hidden="true"></div>
+  <div class="ingredients-overlay" aria-hidden="true"></div>
+
+  <header class="ingredients-header">
+    <span class="section-index" aria-hidden="true">III.</span>
+    <p class="section-label">What's Inside</p>
+    <h2>Two ingredients.<br>Zero compromise.</h2>
+    <div class="thin-rule"></div>
+  </header>
+
+  <div class="ingredients-body">
+    <div class="ingredients-text">
+      <div class="ingredient-bar">
+        <span class="ingredient-index" aria-hidden="true">01</span>
+        <div class="ingredient-header">
+          <span class="ingredient-name">Grass-Fed Beef Marrow Oil</span>
+          <span class="ingredient-pct">70<em>%</em></span>
+        </div>
+        <div class="bar-track">
+          <div class="bar-fill" style="width: 70%;"></div>
+        </div>
+        <p class="ingredient-desc">Rendered from the bones of free-roaming Mongolian cattle. Dense with fat-soluble vitamins, collagen precursors, and natural CLA. The ancestral cooking fat, modernised.</p>
+      </div>
+
+      <div class="ingredient-bar">
+        <span class="ingredient-index" aria-hidden="true">02</span>
+        <div class="ingredient-header">
+          <span class="ingredient-name">Cold-Pressed Avocado Oil</span>
+          <span class="ingredient-pct">30<em>%</em></span>
+        </div>
+        <div class="bar-track">
+          <div class="bar-fill" style="width: 30%;"></div>
+        </div>
+        <p class="ingredient-desc">Added for its neutral flavour and high oleic acid content — rounding the blend and raising the smoke point for uncompromising performance in any kitchen.</p>
+      </div>
+    </div>
+  </div>
+
+  <div class="ingredients-footer">
+    <svg class="fleuron" viewBox="0 0 120 20" aria-hidden="true">
+      <line x1="0" y1="10" x2="48" y2="10" stroke="currentColor" stroke-width="1"/>
+      <circle cx="60" cy="10" r="2" fill="currentColor"/>
+      <line x1="72" y1="10" x2="120" y2="10" stroke="currentColor" stroke-width="1"/>
+    </svg>
+  </div>
+</section>
+
+<!-- STORY / OUR STORY -->
+<section class="story-section reveal" id="story">
+  <span class="section-index" aria-hidden="true">IV.</span>
+  <div class="story-image">
+     <img src="./webp%20images/malchin.webp" alt="Mongolian Herder">
+  </div>
+  <div class="story-text">
+    <p class="section-label">Our Story</p>
+    <h2>The steppe has always known<br>what the body needs.</h2>
+    <p class="story-meta">Est. 2026 &middot; Ulaanbaatar</p>
+    <div class="thin-rule" style="background: var(--gold);"></div>
+    <p class="drop-cap">Long before supermarkets and seed oils, the nomads of the Mongolian steppe subsisted on the richest parts of their animals — including the marrow inside the bones. It was warmth in winter, energy on horseback, and medicine for tired joints.</p>
+    <p>Prime Pasture was born from a desire to bring that ancestral wisdom into the modern kitchen — without compromising on purity, without shortcuts, and without the industrial processing that strips modern oils of everything worthwhile.</p>
+    <p>We work directly with Mongolian herding families whose cattle roam the open steppe year-round, never confined, never grain-fed. Every bottle reflects their landscape, their animals, and their way of life.</p>
+    <svg class="story-signoff" viewBox="0 0 60 60" aria-hidden="true">
+      <circle cx="30" cy="30" r="28" fill="none" stroke="currentColor" stroke-width="1" opacity="0.85"/>
+      <circle cx="30" cy="30" r="22" fill="none" stroke="currentColor" stroke-width="0.5" opacity="0.55"/>
+      <g transform="translate(30 30)" fill="none" stroke="currentColor" stroke-width="1.1" stroke-linecap="round">
+        <path d="M -2 -9 Q 0 -2 2 -9" fill="currentColor" stroke="none"/>
+        <path d="M -7 -5 Q -3 0 0 -4" fill="currentColor" stroke="none" opacity="0.9"/>
+        <path d="M 7 -5 Q 3 0 0 -4" fill="currentColor" stroke="none" opacity="0.9"/>
+        <line x1="0" y1="-4" x2="0" y2="5"/>
+        <path d="M -11 5 Q 0 15 11 5 Z" fill="currentColor" fill-opacity="0.16"/>
+        <line x1="11" y1="5" x2="16" y2="3"/>
+      </g>
+    </svg>
+  </div>
+</section>
+
+<!-- PILLARS -->
+<section class="pillars-section reveal">
+  <svg class="pillars-watermark" viewBox="0 0 200 200" aria-hidden="true">
+    <circle cx="100" cy="100" r="96" fill="none" stroke="currentColor" stroke-width="0.35"/>
+    <circle cx="100" cy="100" r="88" fill="none" stroke="currentColor" stroke-width="0.2" opacity="0.7"/>
+    <circle cx="100" cy="100" r="74" fill="none" stroke="currentColor" stroke-width="0.15" opacity="0.5"/>
+    <circle cx="18"  cy="100" r="1.6" fill="currentColor"/>
+    <circle cx="182" cy="100" r="1.6" fill="currentColor"/>
+    <circle cx="100" cy="18"  r="1.2" fill="currentColor" opacity="0.8"/>
+    <circle cx="100" cy="182" r="1.2" fill="currentColor" opacity="0.8"/>
+    <g transform="translate(100 100)" fill="none" stroke="currentColor" stroke-width="1.1" stroke-linecap="round">
+      <path d="M -4 -18 Q 0 -4 4 -18" fill="currentColor" stroke="none"/>
+      <path d="M -12 -10 Q -6 -2 0 -8" fill="currentColor" stroke="none"/>
+      <path d="M 12 -10 Q 6 -2 0 -8" fill="currentColor" stroke="none"/>
+      <line x1="0" y1="-8" x2="0" y2="6"/>
+      <path d="M -22 6 Q 0 26 22 6 Z" fill="currentColor" fill-opacity="0.14"/>
+      <line x1="22" y1="6" x2="32" y2="2"/>
+    </g>
+  </svg>
+  <header class="pillars-header">
+    <span class="section-index" aria-hidden="true">V.</span>
+    <p class="section-label">The Principles</p>
+    <h2>Why Prime Pasture</h2>
+    <p class="pillars-subtitle">The principles we don't compromise on</p>
+    <svg class="fleuron" viewBox="0 0 120 20" aria-hidden="true">
+      <line x1="0" y1="10" x2="48" y2="10" stroke="currentColor" stroke-width="1"/>
+      <circle cx="60" cy="10" r="2" fill="currentColor"/>
+      <line x1="72" y1="10" x2="120" y2="10" stroke="currentColor" stroke-width="1"/>
+    </svg>
+  </header>
+
+  <div class="pillars-grid">
+    <div class="pillar">
+      <span class="pillar-index" aria-hidden="true">I</span>
+      <svg class="pillar-icon-svg" viewBox="0 0 48 48" aria-hidden="true">
+        <g fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round">
+          <path d="M24 44 Q 18 28 14 10"/>
+          <path d="M24 44 Q 22 26 22 8"/>
+          <path d="M24 44 Q 28 28 32 12"/>
+          <path d="M24 44 Q 34 34 40 22"/>
+          <path d="M24 44 Q 14 36 8 22" opacity="0.7"/>
+        </g>
+      </svg>
+      <p class="pillar-title">100% Grass-Fed</p>
+      <p class="pillar-desc">Every animal that contributes to our oil has spent its life on open Mongolian pasture &mdash; no grain, no feedlot, no shortcuts.</p>
+    </div>
+
+    <div class="pillar">
+      <span class="pillar-index" aria-hidden="true">II</span>
+      <svg class="pillar-icon-svg" viewBox="0 0 48 48" aria-hidden="true">
+        <g fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round">
+          <path d="M24 44 C 13 42 10 30 14 22 C 16 26 18 25 19 20 C 19 12 25 6 24 2 C 28 6 33 12 34 20 C 35 26 38 24 38 28 C 38 38 33 44 24 44 Z"/>
+          <path d="M24 40 C 20 38 18 34 21 30 C 22 32 25 32 25 28 C 28 32 30 36 26 40 Z" opacity="0.55"/>
+        </g>
+      </svg>
+      <p class="pillar-title">High-Heat Ready</p>
+      <p class="pillar-desc">A 500&deg;F smoke point means this oil performs where others fail &mdash; frying, searing, grilling, roasting without oxidising.</p>
+    </div>
+
+    <div class="pillar">
+      <span class="pillar-index" aria-hidden="true">III</span>
+      <svg class="pillar-icon-svg" viewBox="0 0 48 48" aria-hidden="true">
+        <g fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round">
+          <path d="M18 6 L30 6"/>
+          <path d="M20 6 L20 22 L10 40 Q 10 44 14 44 L34 44 Q 38 44 38 40 L28 22 L28 6"/>
+          <line x1="14" y1="32" x2="34" y2="32" opacity="0.5"/>
+          <circle cx="20" cy="38" r="1" fill="currentColor"/>
+          <circle cx="28" cy="36" r="0.8" fill="currentColor"/>
+          <circle cx="24" cy="40" r="0.8" fill="currentColor"/>
+        </g>
+      </svg>
+      <p class="pillar-title">Minimally Processed</p>
+      <p class="pillar-desc">We render, not refine. The fat is gently extracted to preserve every nutrient nature put there in the first place.</p>
+    </div>
+
+    <div class="pillar">
+      <span class="pillar-index" aria-hidden="true">IV</span>
+      <svg class="pillar-icon-svg" viewBox="0 0 48 48" aria-hidden="true">
+        <g fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round">
+          <circle cx="11" cy="18" r="5"/>
+          <circle cx="11" cy="30" r="5"/>
+          <circle cx="37" cy="18" r="5"/>
+          <circle cx="37" cy="30" r="5"/>
+          <line x1="14" y1="18" x2="34" y2="18"/>
+          <line x1="14" y1="30" x2="34" y2="30"/>
+          <line x1="16" y1="18" x2="16" y2="30" opacity="0.6"/>
+          <line x1="32" y1="18" x2="32" y2="30" opacity="0.6"/>
+          <circle cx="24" cy="24" r="3" stroke-width="1.2" opacity="0.7"/>
+          <circle cx="24" cy="24" r="1.2" fill="currentColor" opacity="0.8"/>
+        </g>
+      </svg>
+      <p class="pillar-title">Nutrient-Dense</p>
+      <p class="pillar-desc">Collagen, B12, CLA, and anti-inflammatory compounds &mdash; naturally occurring in the marrow of well-raised animals.</p>
+    </div>
+  </div>
+</section>
+
+<!-- FOOTER -->
+<footer>
+  <div class="footer-hero">
+    <svg class="fleuron" viewBox="0 0 120 20" aria-hidden="true">
+      <line x1="0" y1="10" x2="48" y2="10" stroke="currentColor" stroke-width="1"/>
+      <circle cx="60" cy="10" r="2" fill="currentColor"/>
+      <line x1="72" y1="10" x2="120" y2="10" stroke="currentColor" stroke-width="1"/>
+    </svg>
+    <p class="footer-logotype">Prime Pasture</p>
+    <p class="footer-tagline">Sourced from the Mongolian Steppe</p>
+  </div>
+
+  <div class="footer-divider">
+    <span class="footer-rule" aria-hidden="true"></span>
+    <svg class="footer-seal" viewBox="0 0 60 60" aria-hidden="true">
+      <circle cx="30" cy="30" r="28" fill="none" stroke="currentColor" stroke-width="0.8"/>
+      <circle cx="30" cy="30" r="22" fill="none" stroke="currentColor" stroke-width="0.4" opacity="0.55"/>
+      <g transform="translate(30 30)" fill="none" stroke="currentColor" stroke-width="1" stroke-linecap="round">
+        <path d="M -2 -8 Q 0 -2 2 -8" fill="currentColor" stroke="none"/>
+        <path d="M -6 -4 Q -3 0 0 -3" fill="currentColor" stroke="none"/>
+        <path d="M 6 -4 Q 3 0 0 -3" fill="currentColor" stroke="none"/>
+        <line x1="0" y1="-3" x2="0" y2="5"/>
+        <path d="M -10 5 Q 0 14 10 5 Z" fill="currentColor" fill-opacity="0.16"/>
+      </g>
+    </svg>
+    <span class="footer-rule" aria-hidden="true"></span>
+  </div>
+
+  <div class="footer-meta">
+    <p class="footer-meta-left">Ulaanbaatar, Mongolia &middot; 100% Grass-Fed</p>
+    <p class="footer-meta-center">&copy; 2026 Prime Pasture</p>
+    <p class="footer-meta-right">Instagram &middot; Contact</p>
+  </div>
+</footer>
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/gsap.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/ScrollTrigger.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/ScrollToPlugin.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/Observer.min.js"></script>
+
+<script>
+  // Always start at top on reload
+  window.scrollTo(0, 0);
+  window.addEventListener('DOMContentLoaded', () => window.scrollTo(0, 0));
+  window.addEventListener('load', () => {
+    window.scrollTo(0, 0);
+    requestAnimationFrame(() => window.scrollTo(0, 0));
+  });
+  window.addEventListener('pageshow', () => window.scrollTo(0, 0));
+
+  // Register GSAP plugins
+  gsap.registerPlugin(ScrollTrigger, ScrollToPlugin, Observer);
+
+  // Scroll reveal
+  const observer = new IntersectionObserver((entries) => {
+    entries.forEach(e => {
+      if (e.isIntersecting) {
+        e.target.classList.add('visible');
+      }
+    });
+  }, { threshold: 0.12 });
+
+  document.querySelectorAll('.reveal').forEach(el => observer.observe(el));
+
+  const nav = document.querySelector('nav');
+  const syncNavVisibility = () => {
+    nav.classList.toggle('nav-hidden', window.scrollY > 0);
+  };
+
+  syncNavVisibility();
+  window.addEventListener('scroll', syncNavVisibility, { passive: true });
+
+  // ===== CINEMATIC PRODUCT SECTION (bidirectional) =====
+  // Disable scroll-hijack + cinematic slider on mobile — layout is stacked there
+  if (!window.matchMedia('(max-width: 760px)').matches) {
+  const productSection = document.querySelector('.product-section');
+  const productBg      = document.querySelector('.product-bg');
+  const productCard1   = document.querySelector('.product-card-1');
+  const productCard2   = document.querySelector('.product-card-2');
+  const productSeal    = document.querySelector('.product-seal');
+
+  // Seal slides from right side (p1) to left side (p2) during transition.
+  // Distance = viewport width minus both side-offsets minus seal width.
+  let sealShift = 0;
+  const recalcSealShift = () => {
+    if (!productSeal) return;
+    const offset = parseFloat(getComputedStyle(productSeal).right) || 0;
+    sealShift = -(window.innerWidth - 2 * offset - productSeal.offsetWidth);
+  };
+  recalcSealShift();
+
+  const LOCK = 0.3;
+  const state = { view: 'p1', busy: false, active: false };
+
+  const transitionTl = gsap.timeline({
+    paused: true,
+    defaults: { ease: 'power2.out', duration: 0.9 },
+    onComplete: () => {
+      state.view = 'p2';
+      gsap.delayedCall(LOCK, () => { state.busy = false; });
+    },
+    onReverseComplete: () => {
+      state.view = 'p1';
+      gsap.delayedCall(LOCK, () => { state.busy = false; });
+    }
+  });
+  transitionTl
+    .to(productBg,    { xPercent: -33.333 }, 0)
+    .to(productCard1, { opacity: 0, x: -40 }, 0)
+    .fromTo(productCard2,
+      { opacity: 0, x: 40 },
+      { opacity: 1, x: 0 }, 0)
+    .to(productSeal,  { x: () => sealShift }, 0);
+
+  window.addEventListener('resize', () => {
+    recalcSealShift();
+    transitionTl.invalidate();
+    // Keep seal position synced with current view after recalc
+    if (state.view === 'p2') gsap.set(productSeal, { x: sealShift });
+    else gsap.set(productSeal, { x: 0 });
+  });
+
+  const setView = (v) => {
+    if (v === 'p2') { transitionTl.progress(1).pause(); }
+    else            { transitionTl.progress(0).pause(); }
+    state.view = v;
+  };
+
+  const advance = () => {
+    if (state.busy || state.view === 'p2') return;
+    state.busy = true;
+    transitionTl.play();
+  };
+  const reverseT = () => {
+    if (state.busy || state.view === 'p1') return;
+    state.busy = true;
+    transitionTl.reverse();
+  };
+
+  const releaseTo = (y) => {
+    state.active = false;
+    state.busy = true;
+    inputObserver.disable();
+    gsap.to(window, {
+      duration: 0.7,
+      ease: 'power2.out',
+      scrollTo: { y, autoKill: false },
+      onComplete: () => {
+        state.busy = false;
+        reEngageObserver.enable();
+      }
+    });
+  };
+
+  const releaseDown = () => {
+    state.active = false;
+    state.busy = false;
+    inputObserver.disable();
+    reEngageObserver.enable();
+  };
+
+  const inputObserver = Observer.create({
+    target: window,
+    type: 'wheel,touch',
+    preventDefault: true,
+    tolerance: 10,
+    onDown: () => {
+      if (!state.active || state.busy) return;
+      if (state.view === 'p1') advance();
+      else releaseDown();
+    },
+    onUp: () => {
+      if (!state.active || state.busy) return;
+      if (state.view === 'p2') reverseT();
+      else releaseTo(Math.max(0, productSection.offsetTop - window.innerHeight));
+    }
+  });
+  inputObserver.disable();
+
+  const enterSection = (resetView) => {
+    if (state.active) return;
+    state.active = true;
+    state.busy = true;
+    if (resetView) setView('p1');
+    reEngageObserver.disable();
+    inputObserver.enable();
+    gsap.to(window, {
+      duration: 0.7,
+      ease: 'power2.out',
+      scrollTo: { y: productSection, autoKill: false },
+      onComplete: () => {
+        gsap.delayedCall(LOCK, () => { state.busy = false; });
+      }
+    });
+  };
+
+  // Re-engage when scrolling up into the section (from inside or below it)
+  const reEngageObserver = Observer.create({
+    target: window,
+    type: 'wheel,touch',
+    tolerance: 10,
+    onUp: () => {
+      if (state.active || state.busy) return;
+      const rect = productSection.getBoundingClientRect();
+      if (rect.top <= 0 && rect.bottom > 0) {
+        enterSection(false);
+      }
+    }
+  });
+
+  ScrollTrigger.create({
+    trigger: productSection,
+    start: 'top bottom',
+    onEnter: () => enterSection(true)
+  });
+  } // end desktop-only cinematic block
+
+</script>
+
+</body>
+</html>
