@@ -75,8 +75,8 @@ top: 0; left: 0; right: 0;
 z-index: 100;
 display: flex;
 justify-content: space-between;
-align-items: center;
-padding: 24px 48px;
+align-items: flex-start;
+padding: 30px 48px 16px;
 mix-blend-mode: normal;
 transition: opacity 0.28s ease, transform 0.28s ease;
 }
@@ -100,11 +100,12 @@ display: flex;
 align-items: center;
 gap: 8px;
 position: relative;
+top: -20px;
 }
 
 .nav-brand img {
-width: 90px;
-height: 90px;
+width: 150px;
+height: 150px;
 object-fit: contain;
 object-position: center;
 display: block;
@@ -112,13 +113,15 @@ display: block;
 
 .nav-logo {
 font-family: 'Cormorant Garamond', serif;
-font-size: 22px;
+font-size: 28px;
 font-weight: 400;
 letter-spacing: 0.12em;
 color: var(--cream);
 text-transform: uppercase;
 position: relative;
 line-height: 1;
+top: -12px;
+left: -17px;
 }
 
 .nav-links {
@@ -1445,9 +1448,11 @@ transform: translateY(0);
     background-color: var(--dark);
     background-repeat: no-repeat, no-repeat;
     background-size: 70% auto, cover;
-    margin-bottom: -24px;
-    -webkit-mask-image: linear-gradient(to bottom, #000 70%, rgba(0,0,0,0) 100%);
-            mask-image: linear-gradient(to bottom, #000 70%, rgba(0,0,0,0) 100%);
+      /* stop overlapping the glass panel and soften the fade */
+      margin-bottom: 0;
+      background-color: transparent;
+      -webkit-mask-image: linear-gradient(to bottom, rgba(0,0,0,0.65) 45%, rgba(0,0,0,0) 100%);
+        mask-image: linear-gradient(to bottom, rgba(0,0,0,0.65) 45%, rgba(0,0,0,0) 100%);
   }
   .product-card-1::before {
     background-image:
