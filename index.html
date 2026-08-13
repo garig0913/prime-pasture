@@ -13,6 +13,16 @@
 </head>
 <body>
 
+  <!-- Loading overlay shown until hero background and landing product image finish loading -->
+  <div class="loading-overlay" aria-hidden="true">
+    <div class="loader" aria-hidden="true">
+      <svg class="loader-ring" viewBox="0 0 50 50" width="56" height="56" aria-hidden="true">
+        <circle cx="25" cy="25" r="20" fill="none" stroke="rgba(255,255,255,0.12)" stroke-width="4"></circle>
+        <circle cx="25" cy="25" r="20" fill="none" stroke="var(--gold)" stroke-width="4" stroke-linecap="round" stroke-dasharray="31.4 62.8"></circle>
+      </svg>
+    </div>
+  </div>
+
 <!-- NAV -->
 <nav>
   <div class="nav-brand">
@@ -417,6 +427,41 @@
 </footer>
 
 <script>
+  // wait for hero background + landing product image to load, then show hero
+  (function(){
+    try {
+      document.documentElement.classList.add('is-loading');
+      const heroBgEl = document.querySelector('.hero-bg');
+      const landingImgEl = document.querySelector('.landing-products-full img');
+
+      const urls = [];
+      if (heroBgEl) {
+        const bg = getComputedStyle(heroBgEl).backgroundImage || '';
+        const m = bg.match(/url\((['"]?)(.*?)\1\)/);
+        if (m && m[2]) urls.push(m[2]);
+      }
+      if (landingImgEl && landingImgEl.src) urls.push(landingImgEl.src);
+
+      let loaded = 0;
+      if (urls.length === 0) return finishLoad();
+
+      urls.forEach(u => {
+        const img = new Image();
+        img.onload = img.onerror = () => { loaded++; if (loaded >= urls.length) finishLoad(); };
+        // ensure absolute URL is requested
+        img.src = u;
+      });
+
+      function finishLoad(){
+        document.documentElement.classList.remove('is-loading');
+        document.documentElement.classList.add('is-ready');
+        const overlay = document.querySelector('.loading-overlay');
+        if (overlay) overlay.classList.add('fade-out');
+        setTimeout(()=>{ if (overlay && overlay.parentNode) overlay.parentNode.removeChild(overlay); }, 700);
+      }
+    } catch (e) { document.documentElement.classList.remove('is-loading'); }
+  })();
+
   // Always start at top on reload
   window.scrollTo(0, 0);
   window.addEventListener('DOMContentLoaded', () => window.scrollTo(0, 0));
