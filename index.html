@@ -7,6 +7,10 @@
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,500;1,300;1,400&family=Jost:wght@200;300;400&display=swap" rel="stylesheet">
 <link rel="stylesheet" href="style.css">
+  <!-- Preload key hero + landing images and mark page loading immediately -->
+  <link rel="preload" as="image" href="./webp%20images/ger.webp">
+  <link rel="preload" as="image" href="./webp%20images/landing%20page%202%20products.png">
+  <script>window.__ppLoadStart = Date.now(); document.documentElement.classList.add('is-loading');</script>
 <script>
   if ('scrollRestoration' in history) history.scrollRestoration = 'manual';
 </script>
@@ -14,9 +18,9 @@
 <body>
 
   <!-- Loading overlay shown until hero background and landing product image finish loading -->
-  <div class="loading-overlay" aria-hidden="true">
+  <div class="loading-overlay" aria-hidden="true" style="position:fixed;inset:0;display:flex;align-items:center;justify-content:center;background:rgba(18,14,11,0.95);z-index:9999;">
     <div class="loader" aria-hidden="true">
-      <svg class="loader-ring" viewBox="0 0 50 50" width="56" height="56" aria-hidden="true">
+      <svg class="loader-ring" viewBox="0 0 50 50" width="56" height="56" aria-hidden="true" style="animation:spin 1.2s linear infinite;">
         <circle cx="25" cy="25" r="20" fill="none" stroke="rgba(255,255,255,0.12)" stroke-width="4"></circle>
         <circle cx="25" cy="25" r="20" fill="none" stroke="var(--gold)" stroke-width="4" stroke-linecap="round" stroke-dasharray="31.4 62.8"></circle>
       </svg>
@@ -453,11 +457,17 @@
       });
 
       function finishLoad(){
-        document.documentElement.classList.remove('is-loading');
-        document.documentElement.classList.add('is-ready');
-        const overlay = document.querySelector('.loading-overlay');
-        if (overlay) overlay.classList.add('fade-out');
-        setTimeout(()=>{ if (overlay && overlay.parentNode) overlay.parentNode.removeChild(overlay); }, 700);
+        const MIN_MS = 360; // minimum overlay time to avoid flicker
+        const start = window.__ppLoadStart || Date.now();
+        const elapsed = Date.now() - start;
+        const wait = Math.max(0, MIN_MS - elapsed);
+        setTimeout(() => {
+          document.documentElement.classList.remove('is-loading');
+          document.documentElement.classList.add('is-ready');
+          const overlay = document.querySelector('.loading-overlay');
+          if (overlay) overlay.classList.add('fade-out');
+          setTimeout(()=>{ if (overlay && overlay.parentNode) overlay.parentNode.removeChild(overlay); }, 700);
+        }, wait);
       }
     } catch (e) { document.documentElement.classList.remove('is-loading'); }
   })();

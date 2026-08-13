@@ -48,6 +48,9 @@ overflow-x: hidden;
   color: var(--gold);
   margin: 32px auto;
   opacity: 0.85;
+
+/* reveal rules when ready */
+.is-ready .hero, .is-ready .landing-products-full { opacity: 1 !important; visibility: visible !important; }
 }
 
 /* Drop-cap on first letter of a paragraph */
