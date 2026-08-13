@@ -6,11 +6,11 @@
 <title>Prime Pasture — 100% Grass-Fed Cooking Oils</title>
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,500;1,300;1,400&family=Jost:wght@200;300;400&display=swap" rel="stylesheet">
-<link rel="stylesheet" href="style.css">
   <!-- Preload key hero + landing images and mark page loading immediately -->
   <link rel="preload" as="image" href="./webp%20images/ger.webp">
   <link rel="preload" as="image" href="./webp%20images/landing%20page%202%20products.png">
   <script>window.__ppLoadStart = Date.now(); document.documentElement.classList.add('is-loading');</script>
+  <link rel="stylesheet" href="style.css">
 <script>
   if ('scrollRestoration' in history) history.scrollRestoration = 'manual';
 </script>
@@ -449,14 +449,17 @@
       let loaded = 0;
       if (urls.length === 0) return finishLoad();
 
+      let finished = false;
+      const MAX_WAIT = 2500; // max time to wait for images
+      const maxTimer = setTimeout(() => { if (!finished) { finished = true; doFinish(); } }, MAX_WAIT);
+
       urls.forEach(u => {
         const img = new Image();
-        img.onload = img.onerror = () => { loaded++; if (loaded >= urls.length) finishLoad(); };
-        // ensure absolute URL is requested
+        img.onload = img.onerror = () => { if (finished) return; loaded++; if (loaded >= urls.length) { finished = true; clearTimeout(maxTimer); doFinish(); } };
         img.src = u;
       });
 
-      function finishLoad(){
+      function doFinish(){
         const MIN_MS = 360; // minimum overlay time to avoid flicker
         const start = window.__ppLoadStart || Date.now();
         const elapsed = Date.now() - start;
