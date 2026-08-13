@@ -31,12 +31,18 @@
 <section class="hero">
   <div class="hero-bg"></div>
   <div class="hero-overlay"></div>
+  
   <div class="hero-content">
     <p class="hero-eyebrow">Mongolia · 100% Grass-Fed · Ancestral Cooking</p>
     <h1 class="hero-title">Fat as it<br>was <em>meant to be.</em></h1>
     <div class="hero-divider"></div>
     <p class="hero-sub">Rendered from the bones of free-roaming Mongolian cattle. Unrefined. Untouched. Made the way the steppe has always made it.</p>
   </div>
+  <!-- Full-width products image overlayed below hero text -->
+  <div class="landing-products-full">
+    <img src="./webp%20images/landing%20page%202%20products.png" alt="Our Products">
+  </div>
+
   <div class="scroll-hint">
     <span>Scroll</span>
     <div class="scroll-line"></div>
@@ -44,119 +50,124 @@
 </section>
 
 
+
 <!-- PRODUCT SECTION -->
-<section class="product-section" id="products">
-  <div class="product-container">
-    <!-- Trust seal -->
-    <div class="product-seal" aria-label="Seed oil-free cooking">
-      <svg viewBox="0 0 200 200" xmlns="http://www.w3.org/2000/svg">
-        <defs>
-          <path id="seal-top-arc" d="M 30 100 A 70 70 0 0 1 170 100" fill="none"/>
-          <path id="seal-bot-arc" d="M 34 108 A 66 66 0 0 0 166 108" fill="none"/>
-        </defs>
-        <circle cx="100" cy="100" r="96" fill="none" stroke="currentColor" stroke-width="1.2" opacity="0.95"/>
-        <circle cx="100" cy="100" r="88" fill="none" stroke="currentColor" stroke-width="0.5" opacity="0.5"/>
-        <circle cx="18"  cy="100" r="2" fill="currentColor"/>
-        <circle cx="182" cy="100" r="2" fill="currentColor"/>
-        <text class="seal-text">
-          <textPath href="#seal-top-arc" startOffset="50%" text-anchor="middle">Seed Oil-Free</textPath>
-        </text>
-        <text class="seal-text">
-          <textPath href="#seal-bot-arc" startOffset="50%" text-anchor="middle">Ancestral Cooking</textPath>
-        </text>
-        <g class="seal-icon" transform="translate(100 100)" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round">
-          <!-- leafy sprig rising from pan -->
-          <path d="M -4 -18 Q 0 -4 4 -18" fill="currentColor" opacity="0.9" stroke="none"/>
-          <path d="M -12 -10 Q -6 -2 0 -8" fill="currentColor" opacity="0.85" stroke="none"/>
-          <path d="M 12 -10 Q 6 -2 0 -8" fill="currentColor" opacity="0.85" stroke="none"/>
-          <line x1="0" y1="-8" x2="0" y2="6"/>
-          <!-- pan bowl -->
-          <path d="M -22 6 Q 0 26 22 6 Z" fill="currentColor" fill-opacity="0.14"/>
-          <!-- handle -->
-          <line x1="22" y1="6" x2="32" y2="2"/>
-        </g>
-      </svg>
-    </div>
-
-    <!-- Background image slider -->
-    <div class="product-bg-wrapper">
-      <div class="product-bg" style="background-image: url(./webp%20images/rock%20no%20product%20upscale%202.webp);">
-        <img class="product-spray product-spray-1" src="./webp%20images/bone%20marrow%20spray.webp" alt="Bone Marrow spray">
-        <img class="product-spray product-spray-2" src="./webp images/ubuku ghee can.webp" alt="Ghee spray">
+<div class="product-scroll-wrapper">
+  <div class="product-scroll-container">
+    <section class="product-section product-section-1" id="products">
+  <div class="product-bg" style="background-image: url(./webp%20images/rock%20no%20product%20upscale%202.webp);"></div>
+  <div class="product-seal" aria-label="Seed oil-free cooking">
+    <svg viewBox="0 0 200 200" xmlns="http://www.w3.org/2000/svg">
+      <defs>
+        <path id="seal-top-arc" d="M 30 100 A 70 70 0 0 1 170 100" fill="none"/>
+        <path id="seal-bot-arc" d="M 34 108 A 66 66 0 0 0 166 108" fill="none"/>
+      </defs>
+      <circle cx="100" cy="100" r="96" fill="none" stroke="currentColor" stroke-width="1.2" opacity="0.95"/>
+      <circle cx="100" cy="100" r="88" fill="none" stroke="currentColor" stroke-width="0.5" opacity="0.5"/>
+      <circle cx="18"  cy="100" r="2" fill="currentColor"/>
+      <circle cx="182" cy="100" r="2" fill="currentColor"/>
+      <text class="seal-text">
+        <textPath href="#seal-top-arc" startOffset="50%" text-anchor="middle">Seed Oil-Free</textPath>
+      </text>
+      <text class="seal-text">
+        <textPath href="#seal-bot-arc" startOffset="50%" text-anchor="middle">Ancestral Cooking</textPath>
+      </text>
+      <g class="seal-icon" transform="translate(100 100)" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round">
+        <path d="M -4 -18 Q 0 -4 4 -18" fill="currentColor" opacity="0.9" stroke="none"/>
+        <path d="M -12 -10 Q -6 -2 0 -8" fill="currentColor" opacity="0.85" stroke="none"/>
+        <path d="M 12 -10 Q 6 -2 0 -8" fill="currentColor" opacity="0.85" stroke="none"/>
+        <line x1="0" y1="-8" x2="0" y2="6"/>
+        <path d="M -22 6 Q 0 26 22 6 Z" fill="currentColor" fill-opacity="0.14"/>
+        <line x1="22" y1="6" x2="32" y2="2"/>
+      </g>
+    </svg>
+  </div>
+  <div class="product-overlay">
+    <div class="product-inner product-inner-left">
+      <div class="product-image product-image-left">
+        <img src="./webp images/new ubuku marrow.webp" alt="Bone Marrow Spray">
       </div>
-    </div>
-    
-    <!-- Text overlay -->
-    <div class="product-overlay">
-      <!-- Product 1: Bone Marrow (visible first) -->
       <div class="product-card product-card-1">
-        <img class="mobile-spray" src="./webp%20images/bone%20marrow%20spray.webp" alt="" aria-hidden="true">
         <div class="glass-panel">
-          <p class="section-label">The Collection</p>
-          <h2>Bone Marrow<br><em>& Avocado</em></h2>
-          <p class="product-tagline">500°F Smoke Point · 200ml Spray Can</p>
+        <p class="section-label">The Collection</p>
+        <h2>Bone Marrow<br><em>& Avocado</em></h2>
+        <p class="product-tagline">500°F Smoke Point · 200ml Spray Can</p>
 
-          <div class="specs-grid">
-            <div class="spec-item">
-              <p class="spec-label">Format</p>
-              <p class="spec-value">200ml Spray</p>
-            </div>
-            <div class="spec-item">
-              <p class="spec-label">Smoke Point</p>
-              <p class="spec-value">500°F</p>
-            </div>
+        <div class="specs-grid">
+          <div class="spec-item">
+            <p class="spec-label">Format</p>
+            <p class="spec-value">200ml Spray</p>
           </div>
-
-          <ul class="benefits-list">
-            <li>Stable fats ideal for frying, roasting & grilling at high heat</li>
-            <li>Naturally rich in collagen, B12 & anti-inflammatory compounds</li>
-            <li>Supports joint health, skin vitality & overall wellbeing</li>
-            <li>Less processed than refined seed oils — more nutrient-dense</li>
-            <li>A functional, ancestral alternative to modern cooking fats</li>
-          </ul>
-
-          <div class="price-tag">
-            <span class="price-amount">18,900</span>
-            <span class="price-currency">MNT / bottle</span>
+          <div class="spec-item">
+            <p class="spec-label">Smoke Point</p>
+            <p class="spec-value">500°F</p>
           </div>
         </div>
-      </div>
 
-      <!-- Product 2: Ghee (revealed on scroll) -->
-      <div class="product-card product-card-2">
-        <div class="glass-panel">
-          <p class="section-label">The Collection</p>
-          <h2>Golden<br><em>Ghee</em></h2>
-          <p class="product-tagline">485°F Smoke Point · 200ml Spray Can</p>
+        <ul class="benefits-list">
+          <li>Stable fats ideal for frying, roasting & grilling at high heat</li>
+          <li>Naturally rich in collagen, B12 & anti-inflammatory compounds</li>
+          <li>Supports joint health, skin vitality & overall wellbeing</li>
+          <li>Less processed than refined seed oils — more nutrient-dense</li>
+          <li>A functional, ancestral alternative to modern cooking fats</li>
+        </ul>
 
-          <div class="specs-grid">
-            <div class="spec-item">
-              <p class="spec-label">Format</p>
-              <p class="spec-value">200ml Spray</p>
-            </div>
-            <div class="spec-item">
-              <p class="spec-label">Smoke Point</p>
-              <p class="spec-value">485°F</p>
-            </div>
-          </div>
-
-          <ul class="benefits-list">
-            <li>Pure butterfat clarified to perfection — zero lactose, zero casein</li>
-            <li>Rich in butyric acid & fat-soluble vitamins A, D, E & K2</li>
-            <li>Enhances nutrient absorption & supports gut health</li>
-            <li>The golden standard of ancestral cooking fats</li>
-            <li>Shelf-stable, aromatic, and deeply nourishing</li>
-          </ul>
-
-          <div class="price-tag">
-            <span class="price-amount">21,900</span>
-            <span class="price-currency">MNT / bottle</span>
-          </div>
+        <div class="price-tag">
+          <span class="price-amount">18,900</span>
+          <span class="price-currency">MNT / bottle</span>
         </div>
       </div>
     </div>
   </div>
 </section>
+
+<section class="product-section product-section-2">
+  <div class="product-bg" style="background-image: url(./webp%20images/rock%20no%20product%20upscale%202.webp);"></div>
+  <div class="product-overlay">
+    <div class="product-inner product-inner-right">
+      <div class="product-card product-card-2">
+        <div class="glass-panel">
+        <p class="section-label">The Collection</p>
+        <h2>Golden<br><em>Ghee</em></h2>
+        <p class="product-tagline">485°F Smoke Point · 200ml Spray Can</p>
+
+        <div class="specs-grid">
+          <div class="spec-item">
+            <p class="spec-label">Format</p>
+            <p class="spec-value">200ml Spray</p>
+          </div>
+          <div class="spec-item">
+            <p class="spec-label">Smoke Point</p>
+            <p class="spec-value">485°F</p>
+          </div>
+        </div>
+
+        <ul class="benefits-list">
+          <li>Pure butterfat clarified to perfection — zero lactose, zero casein</li>
+          <li>Rich in butyric acid & fat-soluble vitamins A, D, E & K2</li>
+          <li>Enhances nutrient absorption & supports gut health</li>
+          <li>The golden standard of ancestral cooking fats</li>
+          <li>Shelf-stable, aromatic, and deeply nourishing</li>
+        </ul>
+
+        <div class="price-tag">
+          <span class="price-amount">21,900</span>
+          <span class="price-currency">MNT / bottle</span>
+        </div>
+      </div>
+    </div>
+      <div class="product-image product-image-right">
+        <img src="./webp%20images/new%20ghee.png" alt="Ghee Spray">
+      </div>
+    </div>
+  </div>
+</section>
+    </div>
+    <div class="product-scroll-indicators" aria-hidden="true">
+      <button class="scroll-indicator active" data-target="#products"></button>
+      <button class="scroll-indicator" data-target=".product-section-2"></button>
+    </div>
+</div>
 
 <!-- ORIGIN / SPLIT INTRO -->
 <section class="split-section reveal" id="origin">
@@ -405,11 +416,6 @@
   </div>
 </footer>
 
-<script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/gsap.min.js"></script>
-<script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/ScrollTrigger.min.js"></script>
-<script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/ScrollToPlugin.min.js"></script>
-<script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/Observer.min.js"></script>
-
 <script>
   // Always start at top on reload
   window.scrollTo(0, 0);
@@ -419,9 +425,6 @@
     requestAnimationFrame(() => window.scrollTo(0, 0));
   });
   window.addEventListener('pageshow', () => window.scrollTo(0, 0));
-
-  // Register GSAP plugins
-  gsap.registerPlugin(ScrollTrigger, ScrollToPlugin, Observer);
 
   // Scroll reveal
   const observer = new IntersectionObserver((entries) => {
@@ -439,154 +442,140 @@
     nav.classList.toggle('nav-hidden', window.scrollY > 0);
   };
 
+  const indicators = document.querySelectorAll('.scroll-indicator');
+  const indicatorsEl = document.querySelector('.product-scroll-indicators');
+  const productSections = document.querySelectorAll('.product-scroll-container > .product-section');
+
+  const updateIndicators = () => {
+    const scrollPosition = window.scrollY + window.innerHeight / 2;
+    productSections.forEach((section, index) => {
+      const rect = section.getBoundingClientRect();
+      const top = window.scrollY + rect.top;
+      const bottom = top + rect.height;
+      if (indicators[index]) indicators[index].classList.toggle('active', scrollPosition >= top && scrollPosition < bottom);
+    });
+  };
+
+  const toggleIndicatorsVisibility = () => {
+    const wrapper = document.querySelector('.product-scroll-wrapper');
+    if (!wrapper || !indicatorsEl) return;
+    const rect = wrapper.getBoundingClientRect();
+    const isVisible = rect.top < window.innerHeight && rect.bottom > 0;
+    indicatorsEl.classList.toggle('visible', isVisible);
+  };
+
+  indicators.forEach((button, index) => {
+    button.addEventListener('click', () => {
+      if (productSections[index]) productSections[index].scrollIntoView({ behavior: 'smooth' });
+    });
+  });
+
+  // Use IntersectionObserver to toggle indicator visibility when wrapper is in view
+  const wrapperEl = document.querySelector('.product-scroll-wrapper');
+  if (wrapperEl && indicatorsEl) {
+    const wrapObserver = new IntersectionObserver((entries) => {
+      entries.forEach(e => {
+        indicatorsEl.classList.toggle('visible', e.isIntersecting && e.intersectionRatio > 0.35);
+      });
+    }, { threshold: [0.0, 0.35, 0.75] });
+    wrapObserver.observe(wrapperEl);
+  }
+
+  // subtle auto-snap: when user stops scrolling and a product section is mostly visible,
+  // smoothly lock it to the screen. Debounced and disabled while the user is actively interacting.
+  let snapTimer = null;
+  let isInteracting = false;
+  const SNAP_DELAY = 160; // ms
+  const SNAP_RATIO = 0.60; // require 60% of section visible to snap
+
+  function maybeAutoSnap() {
+    if (isInteracting) return;
+    let bestIndex = -1, bestRatio = 0;
+    productSections.forEach((section, index) => {
+      const rect = section.getBoundingClientRect();
+      const visible = Math.max(0, Math.min(rect.bottom, window.innerHeight) - Math.max(rect.top, 0));
+      const ratio = visible / rect.height;
+      if (ratio > bestRatio) { bestRatio = ratio; bestIndex = index; }
+    });
+
+    if (bestIndex === -1) return;
+
+    // If user is actively scrolling down away from the second product, don't snap back to it.
+    if (bestIndex === 1 && lastScrollDir === 'down') return;
+
+    // Require both a high visible ratio and that the section's center is near the viewport center
+    const rect = productSections[bestIndex].getBoundingClientRect();
+    const sectionCenter = rect.top + rect.height / 2;
+    const viewportCenter = window.innerHeight / 2;
+    const centerDist = Math.abs(sectionCenter - viewportCenter);
+    const centerThreshold = rect.height * 0.28; // allow some leeway
+
+    if (bestRatio >= SNAP_RATIO && centerDist <= centerThreshold) {
+      productSections[bestIndex].scrollIntoView({ behavior: 'smooth' });
+      return;
+    }
+
+    // If we're very close to the next section (user likely trying to move on), don't snap back.
+    // Allow snapping to final section only if user stopped near its top.
+    const nearestTop = rect.top;
+    const topThreshold = 48; // px from top
+    if (bestRatio >= 0.9 && Math.abs(nearestTop) <= topThreshold) {
+      productSections[bestIndex].scrollIntoView({ behavior: 'smooth' });
+    }
+  }
+
+  // Track interaction (mouse/touch). While interacting, suspend auto-snap so it doesn't fight the user.
+  ['touchstart', 'pointerdown', 'mousedown'].forEach(evt => {
+    window.addEventListener(evt, () => { isInteracting = true; if (snapTimer) { clearTimeout(snapTimer); snapTimer = null; } }, { passive: true });
+  });
+  ['touchend', 'pointerup', 'mouseup'].forEach(evt => {
+    window.addEventListener(evt, () => { isInteracting = false; maybeAutoSnap(); }, { passive: true });
+  });
+
+  // Wheel/touchmove: treat continuous wheel as interaction; debounce leaving interaction state
+  let wheelTimer = null;
+  let lastScrollDir = null; // 'up' or 'down'
+  let touchStartY = null;
+  let lastScrollY = window.scrollY || 0;
+  window.addEventListener('wheel', (e) => {
+    isInteracting = true;
+    if (snapTimer) { clearTimeout(snapTimer); snapTimer = null; }
+    // record wheel direction
+    lastScrollDir = (e.deltaY > 0) ? 'down' : 'up';
+    if (wheelTimer) clearTimeout(wheelTimer);
+    wheelTimer = setTimeout(() => { isInteracting = false; maybeAutoSnap(); wheelTimer = null; }, 420);
+  }, { passive: true });
+
+  window.addEventListener('touchmove', (e) => {
+    isInteracting = true;
+    // track touch vertical movement to infer scroll direction
+    if (e.touches && e.touches[0]) {
+      const currentY = e.touches[0].clientY;
+      if (touchStartY !== null) {
+        const delta = touchStartY - currentY;
+        lastScrollDir = (delta > 0) ? 'down' : 'up';
+      }
+      touchStartY = currentY;
+    }
+    if (wheelTimer) clearTimeout(wheelTimer);
+    wheelTimer = setTimeout(() => { isInteracting = false; maybeAutoSnap(); wheelTimer = null; }, 420);
+  }, { passive: true });
+
   syncNavVisibility();
-  window.addEventListener('scroll', syncNavVisibility, { passive: true });
+  window.addEventListener('scroll', () => {
+    syncNavVisibility();
+    updateIndicators();
+    // update lastScrollDir using scroll position (fallback for non-wheel/touch inputs)
+    const newY = window.scrollY || 0;
+    if (newY > lastScrollY) lastScrollDir = 'down';
+    else if (newY < lastScrollY) lastScrollDir = 'up';
+    lastScrollY = newY;
+    if (snapTimer) clearTimeout(snapTimer);
+    snapTimer = setTimeout(() => { maybeAutoSnap(); snapTimer = null; }, SNAP_DELAY);
+  }, { passive: true });
 
-  // ===== CINEMATIC PRODUCT SECTION (bidirectional) =====
-  // Disable scroll-hijack + cinematic slider on mobile — layout is stacked there
-  if (!window.matchMedia('(max-width: 760px)').matches) {
-  const productSection = document.querySelector('.product-section');
-  const productBg      = document.querySelector('.product-bg');
-  const productCard1   = document.querySelector('.product-card-1');
-  const productCard2   = document.querySelector('.product-card-2');
-  const productSeal    = document.querySelector('.product-seal');
-
-  // Seal slides from right side (p1) to left side (p2) during transition.
-  // Distance = viewport width minus both side-offsets minus seal width.
-  let sealShift = 0;
-  const recalcSealShift = () => {
-    if (!productSeal) return;
-    const offset = parseFloat(getComputedStyle(productSeal).right) || 0;
-    sealShift = -(window.innerWidth - 2 * offset - productSeal.offsetWidth);
-  };
-  recalcSealShift();
-
-  const LOCK = 0.3;
-  const state = { view: 'p1', busy: false, active: false };
-
-  const transitionTl = gsap.timeline({
-    paused: true,
-    defaults: { ease: 'power2.out', duration: 0.9 },
-    onComplete: () => {
-      state.view = 'p2';
-      gsap.delayedCall(LOCK, () => { state.busy = false; });
-    },
-    onReverseComplete: () => {
-      state.view = 'p1';
-      gsap.delayedCall(LOCK, () => { state.busy = false; });
-    }
-  });
-  transitionTl
-    .to(productBg,    { xPercent: -33.333 }, 0)
-    .to(productCard1, { opacity: 0, x: -40 }, 0)
-    .fromTo(productCard2,
-      { opacity: 0, x: 40 },
-      { opacity: 1, x: 0 }, 0)
-    .to(productSeal,  { x: () => sealShift }, 0);
-
-  window.addEventListener('resize', () => {
-    recalcSealShift();
-    transitionTl.invalidate();
-    // Keep seal position synced with current view after recalc
-    if (state.view === 'p2') gsap.set(productSeal, { x: sealShift });
-    else gsap.set(productSeal, { x: 0 });
-  });
-
-  const setView = (v) => {
-    if (v === 'p2') { transitionTl.progress(1).pause(); }
-    else            { transitionTl.progress(0).pause(); }
-    state.view = v;
-  };
-
-  const advance = () => {
-    if (state.busy || state.view === 'p2') return;
-    state.busy = true;
-    transitionTl.play();
-  };
-  const reverseT = () => {
-    if (state.busy || state.view === 'p1') return;
-    state.busy = true;
-    transitionTl.reverse();
-  };
-
-  const releaseTo = (y) => {
-    state.active = false;
-    state.busy = true;
-    inputObserver.disable();
-    gsap.to(window, {
-      duration: 0.7,
-      ease: 'power2.out',
-      scrollTo: { y, autoKill: false },
-      onComplete: () => {
-        state.busy = false;
-        reEngageObserver.enable();
-      }
-    });
-  };
-
-  const releaseDown = () => {
-    state.active = false;
-    state.busy = false;
-    inputObserver.disable();
-    reEngageObserver.enable();
-  };
-
-  const inputObserver = Observer.create({
-    target: window,
-    type: 'wheel,touch',
-    preventDefault: true,
-    tolerance: 10,
-    onDown: () => {
-      if (!state.active || state.busy) return;
-      if (state.view === 'p1') advance();
-      else releaseDown();
-    },
-    onUp: () => {
-      if (!state.active || state.busy) return;
-      if (state.view === 'p2') reverseT();
-      else releaseTo(Math.max(0, productSection.offsetTop - window.innerHeight));
-    }
-  });
-  inputObserver.disable();
-
-  const enterSection = (resetView) => {
-    if (state.active) return;
-    state.active = true;
-    state.busy = true;
-    if (resetView) setView('p1');
-    reEngageObserver.disable();
-    inputObserver.enable();
-    gsap.to(window, {
-      duration: 0.7,
-      ease: 'power2.out',
-      scrollTo: { y: productSection, autoKill: false },
-      onComplete: () => {
-        gsap.delayedCall(LOCK, () => { state.busy = false; });
-      }
-    });
-  };
-
-  // Re-engage when scrolling up into the section (from inside or below it)
-  const reEngageObserver = Observer.create({
-    target: window,
-    type: 'wheel,touch',
-    tolerance: 10,
-    onUp: () => {
-      if (state.active || state.busy) return;
-      const rect = productSection.getBoundingClientRect();
-      if (rect.top <= 0 && rect.bottom > 0) {
-        enterSection(false);
-      }
-    }
-  });
-
-  ScrollTrigger.create({
-    trigger: productSection,
-    start: 'top bottom',
-    onEnter: () => enterSection(true)
-  });
-  } // end desktop-only cinematic block
-
+  // initial indicator state
+  updateIndicators();
 </script>
 
 </body>
