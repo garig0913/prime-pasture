@@ -18,12 +18,18 @@
 <body>
 
   <!-- Loading overlay shown until hero background and landing product image finish loading -->
-  <div class="loading-overlay" aria-hidden="true" style="position:fixed;inset:0;display:flex;align-items:center;justify-content:center;background:rgba(18,14,11,0.95);z-index:9999;">
-    <div class="loader" aria-hidden="true">
-      <svg class="loader-ring" viewBox="0 0 50 50" width="56" height="56" aria-hidden="true" style="animation:spin 1.2s linear infinite;">
-        <circle cx="25" cy="25" r="20" fill="none" stroke="rgba(255,255,255,0.12)" stroke-width="4"></circle>
-        <circle cx="25" cy="25" r="20" fill="none" stroke="var(--gold)" stroke-width="4" stroke-linecap="round" stroke-dasharray="31.4 62.8"></circle>
-      </svg>
+  <div class="loading-overlay" aria-hidden="true">
+    <div class="loading-stage">
+      <div class="loading-hero-bg" aria-hidden="true"></div>
+
+      <div class="loader-brand" aria-hidden="true">
+        <img class="loader-logo" src="./webp images/white logo with gerege.webp" alt="Prime Pasture logo">
+        <div class="loader-copy">Prime Pasture</div>
+      </div>
+
+      <div class="loader-bar" aria-hidden="true">
+        <div class="loader-bar-inner"></div>
+      </div>
     </div>
   </div>
 
