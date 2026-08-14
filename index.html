@@ -509,8 +509,10 @@
   const indicators = document.querySelectorAll('.scroll-indicator');
   const indicatorsEl = document.querySelector('.product-scroll-indicators');
   const productSections = document.querySelectorAll('.product-scroll-container > .product-section');
+  const enableProductSnap = window.matchMedia('(min-width: 761px)').matches;
 
   const updateIndicators = () => {
+    if (!enableProductSnap) return;
     const scrollPosition = window.scrollY + window.innerHeight / 2;
     productSections.forEach((section, index) => {
       const rect = section.getBoundingClientRect();
@@ -536,7 +538,7 @@
 
   // Use IntersectionObserver to toggle indicator visibility when wrapper is in view
   const wrapperEl = document.querySelector('.product-scroll-wrapper');
-  if (wrapperEl && indicatorsEl) {
+  if (enableProductSnap && wrapperEl && indicatorsEl) {
     const wrapObserver = new IntersectionObserver((entries) => {
       entries.forEach(e => {
         indicatorsEl.classList.toggle('visible', e.isIntersecting && e.intersectionRatio > 0.35);
@@ -553,6 +555,7 @@
   const SNAP_RATIO = 0.60; // require 60% of section visible to snap
 
   function maybeAutoSnap() {
+    if (!enableProductSnap) return;
     if (isInteracting) return;
     let bestIndex = -1, bestRatio = 0;
     productSections.forEach((section, index) => {
