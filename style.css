@@ -48,9 +48,6 @@ overflow-x: hidden;
   color: var(--gold);
   margin: 32px auto;
   opacity: 0.85;
-
-/* reveal rules when ready */
-.is-ready .hero, .is-ready .landing-products-full { opacity: 1 !important; visibility: visible !important; }
 }
 
 /* Drop-cap on first letter of a paragraph */
@@ -419,6 +416,7 @@ position: relative;
 z-index: 1;
 }
 
+.split-text .fleuron {
   transform: translateY(6%);
 margin: 24px 0 0 0;
 width: 96px;
@@ -1469,27 +1467,7 @@ opacity: 1;
 }
 
 .pillar-title {
-  transform: translateY(-40px) scale(0.96);
-  width: min(100%, 520px);
 font-weight: 300;
-
-/* Ensure inner layout aligns image left/right with card */
-.product-inner {
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  gap: 36px;
-  max-width: 1240px;
-  margin: 0 auto;
-  padding: 0 28px;
-}
-
-/* Mobile: stack image above card */
-@media (max-width: 760px) {
-  .product-inner { flex-direction: column; gap: 18px; }
-  .product-image, .product-card { flex: 1 1 100%; max-width: 100%; }
-  .product-image img { transform: none; width: 100%; }
-}
 color: var(--cream);
 margin-bottom: 14px;
 letter-spacing: 0.01em;

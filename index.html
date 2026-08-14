@@ -247,7 +247,7 @@
           <span class="ingredient-pct">70<em>%</em></span>
         </div>
         <div class="bar-track">
-          <div class="bar-fill" style="width: 70%;"></div>
+          <div class="bar-fill" style="width: 100%;"></div>
         </div>
         <p class="ingredient-desc">Rendered from the bones of free-roaming Mongolian cattle. Dense with fat-soluble vitamins, collagen precursors, and natural CLA. The ancestral cooking fat, modernised.</p>
       </div>
@@ -259,7 +259,7 @@
           <span class="ingredient-pct">30<em>%</em></span>
         </div>
         <div class="bar-track">
-          <div class="bar-fill" style="width: 30%;"></div>
+          <div class="bar-fill" style="width: 100%;"></div>
         </div>
         <p class="ingredient-desc">Added for its neutral flavour and high oleic acid content — rounding the blend and raising the smoke point for uncompromising performance in any kitchen.</p>
       </div>
@@ -453,7 +453,7 @@
       if (landingImgEl && landingImgEl.src) urls.push(landingImgEl.src);
 
       let loaded = 0;
-      if (urls.length === 0) return finishLoad();
+      if (urls.length === 0) return doFinish();
 
       let finished = false;
       const MAX_WAIT = 2500; // max time to wait for images
