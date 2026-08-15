@@ -2336,20 +2336,30 @@ transform: translateY(0);
   .pillar { padding: 38px 24px; }
 }
 
-/* Ghee mobile composition follows the supplied portrait product scene. */
+/* Mobile product compositions follow the supplied portrait product scenes. */
 @media (max-width: 760px) {
+  .product-section-1,
   .product-section-2 {
     background: #17120e;
   }
 
-  .product-section-2 .product-bg {
+  .product-section-1 .product-bg {
     height: min(196vw, 760px);
-    background-image: url('./webp%20images/mobile%20product%20section%20ghee.webp') !important;
+    background-image: url('./webp%20images/mobile%20product%20section%20marrow.webp') !important;
     background-position: center center !important;
     background-size: cover !important;
     filter: none;
   }
 
+  .product-section-2 .product-bg {
+    height: min(196vw, 760px);
+    background-image: url('./webp%20images/mobile%20product%20section%20ghee%20higher%20res.webp') !important;
+    background-position: center center !important;
+    background-size: cover !important;
+    filter: none;
+  }
+
+  .product-section-1 .mobile-product-intro,
   .product-section-2 .mobile-product-intro {
     position: absolute;
     z-index: 3;
@@ -2365,6 +2375,7 @@ transform: translateY(0);
     pointer-events: none;
   }
 
+  .product-section-1 .mobile-product-intro em,
   .product-section-2 .mobile-product-intro em {
     margin-top: 12px;
     color: #a96f10;
@@ -2372,15 +2383,20 @@ transform: translateY(0);
     text-shadow: 0 2px 12px rgba(57, 35, 6, 0.28);
   }
 
+  .product-section-1 .product-seal,
+  .product-section-1 .product-image,
   .product-section-2 .product-seal,
   .product-section-2 .product-image {
     display: none;
   }
 
+  .product-section-1 .product-overlay,
   .product-section-2 .product-overlay {
     background: linear-gradient(180deg, rgba(18, 13, 9, 0) 0 48%, rgba(18, 13, 9, 0.16) 58%, rgba(23, 18, 14, 0.78) 76%, #17120e 100%);
   }
 
+  .product-section-1 .product-inner,
+  .product-section-1 .product-inner-left,
   .product-section-2 .product-inner,
   .product-section-2 .product-inner-right {
     display: block;
@@ -2388,6 +2404,8 @@ transform: translateY(0);
     padding: min(120vw, 468px) 16px 56px;
   }
 
+  .product-section-1 .product-card,
+  .product-section-1 .product-card-1,
   .product-section-2 .product-card,
   .product-section-2 .product-card-2 {
     width: 100%;
@@ -2396,6 +2414,7 @@ transform: translateY(0);
     transform: none;
   }
 
+  .product-section-1 .product-card .glass-panel,
   .product-section-2 .product-card .glass-panel {
     padding: 32px 20px 36px;
     border: 1px solid rgba(239, 232, 214, 0.2);
@@ -2406,6 +2425,7 @@ transform: translateY(0);
     backdrop-filter: blur(8px) saturate(115%);
   }
 
+  .product-section-1 .glass-panel::before,
   .product-section-2 .glass-panel::before {
     display: block;
   }
