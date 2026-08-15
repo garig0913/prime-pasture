@@ -39,7 +39,11 @@
     <img src="./webp images/white logo with gerege.webp" alt="Prime Pasture logo">
     <div class="nav-logo">Prime Pasture</div>
   </div>
-  <ul class="nav-links">
+  <button class="mobile-menu-toggle" type="button" aria-expanded="false" aria-controls="site-navigation">
+    <span>Menu</span>
+    <span class="mobile-menu-mark" aria-hidden="true"></span>
+  </button>
+  <ul class="nav-links" id="site-navigation">
     <li><a href="#products">Products</a></li>
     <li><a href="#origin">Origin</a></li>
     <li><a href="#ingredients">Ingredients</a></li>
@@ -105,7 +109,10 @@
   <div class="product-overlay">
     <div class="product-inner product-inner-left">
       <div class="product-image product-image-left">
-        <img src="./webp images/new ubuku marrow.webp" alt="Bone Marrow Spray">
+        <picture>
+          <source media="(max-width: 760px)" srcset="./webp images/bone marrow spray.webp">
+          <img src="./webp images/new ubuku marrow.webp" alt="Bone Marrow Spray">
+        </picture>
       </div>
       <div class="product-card product-card-1">
         <div class="glass-panel">
@@ -141,8 +148,34 @@
   </div>
 </section>
 
-<section class="product-section product-section-2">
+<section class="product-section product-section-2" id="ghee">
   <div class="product-bg" style="background-image: url(./webp%20images/rock%20no%20product%20upscale%202.webp);"></div>
+  <div class="mobile-product-intro" aria-hidden="true">
+    <span>Golden</span>
+    <em>Ghee</em>
+  </div>
+  <div class="product-seal product-seal-ghee" aria-label="Seed oil-free cooking">
+    <svg viewBox="0 0 200 200" xmlns="http://www.w3.org/2000/svg">
+      <defs>
+        <path id="seal-top-arc-ghee" d="M 30 100 A 70 70 0 0 1 170 100" fill="none"/>
+        <path id="seal-bot-arc-ghee" d="M 34 108 A 66 66 0 0 0 166 108" fill="none"/>
+      </defs>
+      <circle cx="100" cy="100" r="96" fill="none" stroke="currentColor" stroke-width="1.2" opacity="0.95"/>
+      <circle cx="100" cy="100" r="88" fill="none" stroke="currentColor" stroke-width="0.5" opacity="0.5"/>
+      <circle cx="18" cy="100" r="2" fill="currentColor"/>
+      <circle cx="182" cy="100" r="2" fill="currentColor"/>
+      <text class="seal-text"><textPath href="#seal-top-arc-ghee" startOffset="50%" text-anchor="middle">Seed Oil-Free</textPath></text>
+      <text class="seal-text"><textPath href="#seal-bot-arc-ghee" startOffset="50%" text-anchor="middle">Ancestral Cooking</textPath></text>
+      <g class="seal-icon" transform="translate(100 100)" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round">
+        <path d="M -4 -18 Q 0 -4 4 -18" fill="currentColor" opacity="0.9" stroke="none"/>
+        <path d="M -12 -10 Q -6 -2 0 -8" fill="currentColor" opacity="0.85" stroke="none"/>
+        <path d="M 12 -10 Q 6 -2 0 -8" fill="currentColor" opacity="0.85" stroke="none"/>
+        <line x1="0" y1="-8" x2="0" y2="6"/>
+        <path d="M -22 6 Q 0 26 22 6 Z" fill="currentColor" fill-opacity="0.14"/>
+        <line x1="22" y1="6" x2="32" y2="2"/>
+      </g>
+    </svg>
+  </div>
   <div class="product-overlay">
     <div class="product-inner product-inner-right">
       <div class="product-card product-card-2">
@@ -177,7 +210,10 @@
       </div>
     </div>
       <div class="product-image product-image-right">
-        <img src="./webp%20images/new%20ghee.png" alt="Ghee Spray">
+        <picture>
+          <source media="(max-width: 760px)" srcset="./webp images/ghee spray shadow final.webp">
+          <img src="./webp%20images/new%20ghee.png" alt="Ghee Spray">
+        </picture>
       </div>
     </div>
   </div>
@@ -185,7 +221,7 @@
     </div>
     <div class="product-scroll-indicators" aria-hidden="true">
       <button class="scroll-indicator active" data-target="#products"></button>
-      <button class="scroll-indicator" data-target=".product-section-2"></button>
+      <button class="scroll-indicator" data-target="#ghee"></button>
     </div>
 </div>
 
@@ -502,8 +538,26 @@
   document.querySelectorAll('.reveal').forEach(el => observer.observe(el));
 
   const nav = document.querySelector('nav');
+  const mobileMenuToggle = document.querySelector('.mobile-menu-toggle');
+  const mobileNavLinks = document.querySelectorAll('.nav-links a');
+
+  const closeMobileMenu = () => {
+    nav.classList.remove('nav-menu-open');
+    if (mobileMenuToggle) mobileMenuToggle.setAttribute('aria-expanded', 'false');
+  };
+
+  if (mobileMenuToggle) {
+    mobileMenuToggle.addEventListener('click', () => {
+      const isOpen = nav.classList.toggle('nav-menu-open');
+      mobileMenuToggle.setAttribute('aria-expanded', String(isOpen));
+      nav.classList.remove('nav-hidden');
+    });
+  }
+
+  mobileNavLinks.forEach(link => link.addEventListener('click', closeMobileMenu));
+
   const syncNavVisibility = () => {
-    nav.classList.toggle('nav-hidden', window.scrollY > 0);
+    nav.classList.toggle('nav-hidden', window.scrollY > 0 && !nav.classList.contains('nav-menu-open'));
   };
 
   const indicators = document.querySelectorAll('.scroll-indicator');
