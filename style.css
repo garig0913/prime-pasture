@@ -850,29 +850,6 @@ margin: 32px 0;
   font-family: 'Jost', sans-serif;
 }
 
-.price-tag {
-  display: inline-flex;
-  align-items: baseline;
-  gap: 8px;
-  margin-top: 4px;
-}
-
-.price-amount {
-  font-family: 'Cormorant Garamond', serif;
-  font-size: clamp(28px, 2.4vw, 36px);
-  font-weight: 300;
-  letter-spacing: 0.01em;
-  color: var(--cream);
-}
-
-.price-currency {
-  font-family: 'Cormorant Garamond', serif;
-  font-style: italic;
-  font-size: clamp(11px, 0.9vw, 13px);
-  letter-spacing: 0.1em;
-  color: var(--gold);
-}
-
 /* FULLBLEED HORSEMAN */
 .fullbleed {
 height: 90vh;
@@ -2087,9 +2064,6 @@ transform: translateY(0);
   .spec-value { font-size: 20px; }
   .benefits-list { margin-bottom: 22px; }
   .benefits-list li { font-size: 15px; line-height: 1.42; padding: 11px 0; gap: 12px; }
-  .price-amount { font-size: 36px; }
-  .price-currency { font-size: 12px; }
-  .price-tag { display: none; }
   .product-seal { top: 18px; right: 16px; width: 66px; }
   .product-seal-ghee { left: 16px; right: auto; }
 
@@ -2364,7 +2338,7 @@ transform: translateY(0);
     position: absolute;
     z-index: 3;
     top: clamp(88px, 19vw, 118px);
-    left: 24px;
+    left: clamp(40px, 11vw, 54px);
     display: grid;
     color: var(--cream);
     font-family: 'Cormorant Garamond', Georgia, serif;
